@@ -74,6 +74,17 @@ const oneBotHttpApiMessagePrivate: Record<
       user_id: z.union([z.string(), z.number()]).describe('对方QQ号')
     }),
     response: baseResponseSchema
+  },
+  '/call_private_ring': {
+    description: '向私聊对象拨打QQ电话（仅振铃，不进行语音交流）',
+    request: z.object({
+      user_id: z.union([z.string(), z.number()]).describe('对方QQ号')
+    }),
+    response: baseResponseSchema.extend({
+      data: z.object({
+        call_id: z.string().describe('通话请求ID，用于后续终止通话')
+      })
+    })
   }
 }
 

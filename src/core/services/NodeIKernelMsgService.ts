@@ -4,6 +4,10 @@ import { GeneralCallResult } from '@/core/services/common';
 import { MsgReqType, QueryMsgsParams, TmpChatInfoApi } from '@/core/types/msg';
 
 export interface NodeIKernelMsgService {
+    startVoiceCall(peer: Peer): Promise<{ result: number; callId: string }>;
+    
+    stopVoiceCall(callId: string): Promise<GeneralCallResult>;
+
     buildMultiForwardMsg(req: { srcMsgIds: Array<string>, srcContact: Peer }): Promise<GeneralCallResult & { rspInfo: { elements: unknown } }>;
 
     generateMsgUniqueId(chatType: number, time: string): string;

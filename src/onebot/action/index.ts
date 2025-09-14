@@ -5,6 +5,7 @@ import GetGroupList from './group/GetGroupList';
 import GetGroupInfo from './group/GetGroupInfo';
 import GetGroupMemberInfo from './group/GetGroupMemberInfo';
 import SendGroupMsg from './group/SendGroupMsg';
+import CallPrivateRing from './msg/CallPrivateRing';
 import SendPrivateMsg from './msg/SendPrivateMsg';
 import SendMsg from './msg/SendMsg';
 import DeleteMsg from './msg/DeleteMsg';
@@ -184,6 +185,7 @@ export function createActionMap(obContext: NapCatOneBot11Adapter, core: NapCatCo
         new GetGroupMemberInfo(obContext, core),
         new SendGroupMsg(obContext, core),
         new SendPrivateMsg(obContext, core),
+        new CallPrivateRing(obContext, core),
         new SendMsg(obContext, core),
         new DeleteMsg(obContext, core),
         new SetGroupAddRequest(obContext, core),

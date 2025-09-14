@@ -32,6 +32,7 @@ export const ActionName = {
     ClickInlineKeyboardButton: 'click_inline_keyboard_button',
     GetUnidirectionalFriendList: 'get_unidirectional_friend_list',
     // onebot 11
+    CallPrivateRing: 'call_private_ring',
     SendPrivateMsg: 'send_private_msg',
     SendGroupMsg: 'send_group_msg',
     SendMsg: 'send_msg',
